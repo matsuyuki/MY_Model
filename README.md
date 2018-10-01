@@ -395,8 +395,14 @@ $this->user_model->update(array('views'=>'views+1'), array('id'=>'1'), FALSE);
 To get data from your keyword your search, you can used this command
 ```php
 $this->load->model('user_model');
+$this->user_model->search('keyword','field');
+```
+if you want to get with index and limit you can used this command
+```php
+$this->load->model('user_model');
 $this->user_model->get_search('keyword','field');
 ```
+
 Default config get_search() is
 - Limit : 10 ( Total data )
 - Start : 0 ( Index data )
