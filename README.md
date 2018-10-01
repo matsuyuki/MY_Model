@@ -398,10 +398,21 @@ $this->load->model('user_model');
 $this->user_model->get_search('keyword','field');
 ```
 Default config get_search() is
-- Limit : 10 ( Total data u get from DB )
+- Limit : 10 ( Total data )
 - Start : 0 ( Index data )
 - Order : Descending
 
+ or you used this command
+ ```php
+$this->load->model('user_model');
+$this->user_model->get_search('keyword','field','0','10','ASC);
+```
+- Keyword : keyword
+- Field : field
+- Start : 0
+- Limit : 10
+- Order : Ascending
+ 
 
 ## DELETE
 ### The delete() method
